@@ -100,6 +100,16 @@ dim(a)
 
 2. If `is.matrix(x)` is TRUE, what will `is.array(x)` return?
 
+`is.array(x)` should return true because a matrix is just a special kind of array. 
+
+```{r}
+x <- matrix(1:12, nrow = 2, ncol = 6)
+is.matrix(x)
+is.array(x)
+```
+
+
+
 
 
 
