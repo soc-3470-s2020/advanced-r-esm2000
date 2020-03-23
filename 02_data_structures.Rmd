@@ -1,0 +1,60 @@
+---
+title: 'Chapter 2: Data Structures'
+author: "Emeka Mbazor"
+date: "3/23/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Vector Exercises
+
+1. What are the six types of atomic vector? How does a list differ from an atomic vector?
+
+The six types of atomic vectors are:
+  * logical
+  * integer
+  * double
+  * character
+  * complex
+  * real
+  
+An atomic vector can only contain elements of a single type while a list can contain elements of any type (including lists themselves).
+
+2. What makes `is.vector()` and `is.numeric()` fundamentally different to `is.list()` and `is.character()`?
+
+`is.vector()` returns true if the object is an atomic vector or a list and `is.numeric` returns true if the object is an integer vector or a double vector. But `is.list()` only returns true if the object is a list and `is.character()` only returns true if the object is a character vector.
+
+3. Test your knowledge of vector coercion rules by predicting the output of the following uses of c():
+
+```{r}
+c(1, FALSE)
+c("a", 1)
+c(list(1), "a")
+c(TRUE, 1L)
+```
+
+```
+[1, 0]
+["a", "1"]
+[ {1}, {"a"}]
+[1, 1]
+```
+
+4. Why do you need to use `unlist()` to convert a list to an atomic vector? Why doesn’t `as.vector()` work?
+
+`as.vector()` doesn't convert a list to an atomic vector because a list is already a vector. 
+
+5. Why is `1 == "1"` true? Why is `-1 < FALSE` true? Why is `"one" < 2` false?
+
+`1 == "1"` is true because 1 is converted into the character `"1"` and "1" is equal to itself. `-1 < FALSE` is true because `FALSE` is converted into the integer `0` and -1 is less than 0. `"one" < 2` is false because 2 is converted into the character `"2"` and 2 comes before "o" on the ASCII table.
+
+6. Why is the default missing value, `NA`, a logical vector? What’s special about logical vectors? (Hint: think about `c(FALSE, NA_character_)`.)
+
+`NA` is a logical vector because logical vectors are the most flexible. 
+
+
+
+
