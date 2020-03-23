@@ -55,6 +55,35 @@ c(TRUE, 1L)
 
 `NA` is a logical vector because logical vectors are the most flexible. 
 
+# Factors Exercises
 
+1. An early draft used this code to illustrate `structure()`: 
 
+```
+structure(1:5, comment = "my attribute")
+#> [1] 1 2 3 4 5
+```
+
+But when you print that object you don’t see the comment attribute. Why? Is the attribute missing, or is there something else special about it? (Hint: try using help.)
+
+The `comment` attribute is special because it's not printed by `print` or `print.default`
+
+2. What happens to a factor when you modify its levels?
+
+```
+f1 <- factor(letters)
+levels(f1) <- rev(levels(f1))
+```
+
+When you modify a factor's levels the integer values stay the same but the levels are changed.
+
+3. What does this code do? How do f2 and f3 differ from f1?
+
+```
+f2 <- rev(factor(letters))
+
+f3 <- factor(letters, levels = rev(letters))
+```
+
+The first line reverses the levels after the factor is made and makes the data appear reversed as a result. The second line creates a factor with the levels already reversed so the data remains intact (in its original order). 
 
