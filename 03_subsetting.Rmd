@@ -1,0 +1,41 @@
+---
+title: 'Chapter 3: Subsetting'
+author: "Emeka Mbazor"
+date: "3/23/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Data Types Exercises
+
+1. Fix each of the following common data frame subsetting errors:
+
+```
+mtcars[mtcars$cyl = 4, ]
+mtcars[-1:4, ]
+mtcars[mtcars$cyl <= 5]
+mtcars[mtcars$cyl == 4 | 6, ]
+```
+
+```{r}
+mtcars[mtcars$cyl == 4, ]
+mtcars[2:4, ]
+mtcars[mtcars$cyl <= 5, ]
+mtcars[(mtcars$cyl == 4 | mtcars$cyl == 6), ]
+```
+
+2. Why does `x <- 1:5; x[NA]` yield five missing values? (Hint: why is it different from `x[NA_real_]`?)
+
+```{r}
+x <- 1:5
+x[NA]
+x[NA_real_]
+```
+
+`x <- 1:5; x[NA]` yields five missing values because since `NA` is a logical vector it gets recycled four times. 
+
+3. 
+
