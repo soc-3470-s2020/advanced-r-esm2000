@@ -87,3 +87,21 @@ f3 <- factor(letters, levels = rev(letters))
 
 The first line reverses the levels after the factor is made and makes the data appear reversed as a result. The second line creates a factor with the levels already reversed so the data remains intact (in its original order). 
 
+# Matrices and Arrays Exercises
+
+1. What does `dim()` return when applied to a vector?
+
+```{r}
+a <- 1:3
+dim(a)
+```
+
+`dim()` returns `NULL` when applied to a vector.
+
+2. If `is.matrix(x)` is TRUE, what will `is.array(x)` return?
+
+
+
+
+
+
