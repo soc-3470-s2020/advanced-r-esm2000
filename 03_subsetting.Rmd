@@ -52,6 +52,18 @@ x[upper.tri(x)]
 
 `upper.tri()` returns a logical matrix with the positions in the upper triangluar half of the matrix being marked `TRUE` and the lower triangular half of the matrix marked `FALSE`. Subsetting a matrix with it returns only the values in upper triagular half.
 
+4. Why does `mtcars[1:20]` return an error? How does it differ from the similar `mtcars[1:20, ]`?
+
+```{r}
+str(mtcars)
+#mtcars[1:20]
+mtcars[1:11]
+mtcars[1:20, ]
+```
+
+`mtcars[1:20]` returns an error because when you use a single dimension to subset a 2D object, you're subsetting that object's columns and `mtcars` only have 11 columns. 
+
+`mtcars[1:20, ]` is different because it's subsetting row-wise instead of column-wise.
 
 
 
