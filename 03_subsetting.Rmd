@@ -66,6 +66,40 @@ mtcars[1:20, ]
 `mtcars[1:20, ]` is different because it's subsetting row-wise instead of column-wise.
 
 
+5. Implement your own function that extracts the diagonal entries form a matrix. (it shoudld behave like `diag(x)` where x is matrix).
 
+```{r}
+x <- matrix(1:16, ncol = 4, nrow = 4)
+x
+diag(x)
 
+y <- matrix(1:15, ncol = 3, nrow = 5)
+y
+diag(y)
+
+diag2 <- function(x) {
+  
+  if(nrow(x) < ncol(x)) {
+    limit <- nrow(x)
+  } else {
+    limit <- ncol(x)
+  }
+  
+  y <- rep(0, limit)
+  
+  for(i in 1:limit) {
+    y[i] <- x[i, i] 
+  }
+  
+  return(y)
+}
+
+diag2(x)
+
+diag2(y)
+```
+
+6. What does `df[is.na(df)] <- 0` do? How does it work?
+
+It replaces all `NA` values with 0. This is because `is.na()` returns a data frame filled with logical values based on the presence of a missing value or not. 
 
