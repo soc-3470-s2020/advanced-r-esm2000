@@ -126,8 +126,18 @@ The following objects are three dimensional arrays and they differ from 1:5 in s
 
 1. What attributes does a data frame possess?
 
+```{r}
+a <- 1:3
+b <- c("1", "2", "3")
+dfr <- data.frame(a, b)
+
+attributes(dfr)
+```
+
+
 * names
-* dimensions
+* class
+* row.names
 
 2. What does `as.matrix()` do when applied to a data frame with columns of different types?
 
