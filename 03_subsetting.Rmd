@@ -37,5 +37,23 @@ x[NA_real_]
 
 `x <- 1:5; x[NA]` yields five missing values because since `NA` is a logical vector it gets recycled four times. 
 
-3. 
+3. What does `upper.tri()` return? How does subsetting a matrix with it work? 
+
+```
+x <- outer(1:5, 1:5, FUN = "*")
+x[upper.tri(x)]
+```
+
+```{r}
+x <- outer(1:5, 1:5, FUN = "*")
+x
+x[upper.tri(x)]
+```
+
+`upper.tri()` returns a logical matrix with the positions in the upper triangluar half of the matrix being marked `TRUE` and the lower triangular half of the matrix marked `FALSE`. Subsetting a matrix with it returns only the values in upper triagular half.
+
+
+
+
+
 
