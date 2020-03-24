@@ -139,5 +139,14 @@ df[, sample(ncol(df))]
 df[sample(nrow(df)), sample(ncol(df))]
 ```
 
+2. How would you select a random sample of m rows from a data frame? 
+
+```{r}
+m <- sample(nrow(df))[sample(nrow(df))[1]]
+
+df[sample(nrow(df), m),]
+```
+
+
 
 
