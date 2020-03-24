@@ -103,3 +103,23 @@ diag2(y)
 
 It replaces all `NA` values with 0. This is because `is.na()` returns a data frame filled with logical values based on the presence of a missing value or not. 
 
+# Subsetting Operators Exercises
+
+1. Given a linear model, e.g., `mod <- lm(mpg ~ wt, data = mtcars)`, extract the residual degrees of freedom. Extract the R squared from the model summary (summary(mod))
+
+```{r}
+mod <- lm(mpg ~ wt, data = mtcars)
+
+# a model is a list of 12 elements
+str(mod)
+
+# residual degrees of freedom
+mod$df.residual
+
+# a model's summary is a list of 11 elements 
+str(summary(mod))
+
+# R-Squared
+summary(mod)$r.squared
+```
+
