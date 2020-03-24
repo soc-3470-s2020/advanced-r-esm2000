@@ -123,3 +123,21 @@ str(summary(mod))
 summary(mod)$r.squared
 ```
 
+# Application Exercises
+
+1. How would you randomly permute the columns of a data frame? (This is an important technique in random forests.) Can you simultaneously permute the rows and columns in one step?
+
+```{r}
+df <- data.frame(x = rep(1:3, each = 2), y = 6:1, z = letters[1:6])
+
+df
+
+#randomly permute the columns of a data frame
+df[, sample(ncol(df))]
+
+# randomly permute the rows and columns in one step
+df[sample(nrow(df)), sample(ncol(df))]
+```
+
+
+
