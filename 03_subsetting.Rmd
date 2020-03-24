@@ -139,7 +139,7 @@ df[, sample(ncol(df))]
 df[sample(nrow(df)), sample(ncol(df))]
 ```
 
-2. How would you select a random sample of m rows from a data frame? 
+2. How would you select a random sample of m rows from a data frame? s
 
 ```{r}
 m <- sample(nrow(df))[sample(nrow(df))[1]]
@@ -147,6 +147,11 @@ m <- sample(nrow(df))[sample(nrow(df))[1]]
 df[sample(nrow(df), m),]
 ```
 
+3. How could you put the columns in a data frame in alphabetical order?
+
+```{r}
+df[order(names(df))]
+```
 
 
 
