@@ -9,10 +9,11 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Load the prerequisite library. 
+Load the prerequisite libraries. 
 
 ```{r}
 library(lobstr)
+library(tidyverse)
 ```
 
 ## 2.2.2 Exercises 
@@ -33,6 +34,25 @@ obj_addr(d)
 
 There are two objects that are both vectors containing numbers from 1 to 10 (inclusive). `a`, `b`, and `c` refer to the first object and `d` refer to the second object. 
 
+2. The following code accesses the mean function in multiple ways. Do they all point to the same underlying function object? Verify this with lobstr::obj_addr().
+
+```
+mean
+base::mean
+get("mean")
+evalq(mean)
+match.fun("mean")
+```
+
+They all point to the same underlyign function object because they all have the same object addresses.
+
+```{r}
+mean %>% obj_addr()
+base::mean %>% obj_addr()
+get("mean") %>% obj_addr()
+evalq(mean) %>% obj_addr()
+match.fun("mean") %>% obj_addr()
+```
 
 
 
