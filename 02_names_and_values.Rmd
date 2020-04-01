@@ -76,6 +76,21 @@ make.names(".123e1")
 
 `tracemem(1:10)` is not useful because there's no way to make a copy of a vector without an initial reference to that vector.
 
+2. Explain why `tracemem()` shows two copies when you run this code. Hint: carefully look at the difference between this code and the code shown earlier in the section.
 
+```{r}
+x <- c(1L, 2L, 3L)
+tracemem(x)
+
+x[[3]] <- 4
+
+untracemem(x)
+
+x<- c(1L, 2L, 3L)
+tracemem(x)
+x[[3]] <- 4L
+```
+
+`tracemem()` shows two copies when you run this code first the integer vector is coerced into a double vector and then the third number is replaced by '4'.
 
 
