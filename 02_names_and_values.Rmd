@@ -93,4 +93,15 @@ x[[3]] <- 4L
 
 `tracemem()` shows two copies when you run this code first the integer vector is coerced into a double vector and then the third number is replaced by '4'.
 
+3. Sketch out the relationship between the following objects:
+
+```{r}
+a <- 1:10
+b <- list(a, a)
+c <- list(b, a, 1:10)
+
+ref(c)
+```
+
+
 
