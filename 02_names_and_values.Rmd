@@ -62,6 +62,14 @@ This might be problematic because it might lead to a loss of information in colu
 
 `make.names()` prepends the "X" character to the name if the first character isn't a letter. Invalid characters are translated to "." Missing values are translated to the characters "NA". Names that match existing R keywords have a dot appended to them. 
 
+5. I slightly simplified the rules that govern syntactic names. Why is `.123e1` not a syntactic name? Read ?make.names for the full details.
+
+```{r}
+make.names(".123e1")
+```
+
+`.123e1` is not a syntactic name because it doesn't begin with a letter.
+
 
 
 
