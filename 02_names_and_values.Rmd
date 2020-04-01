@@ -1,0 +1,39 @@
+---
+title: 'Chapter 2: Names and Values'
+author: "Emeka Mbazor"
+date: "4/1/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Load the prerequisite library. 
+
+```{r}
+library(lobstr)
+```
+
+## 2.2.2 Exercises 
+
+1. Explain the relationship between `a`, `b`, `c` and `d` in the following code:
+
+```{r}
+a <- 1:10
+b <- a
+c <- b
+d <- 1:10
+
+obj_addr(a)
+obj_addr(b)
+obj_addr(c)
+obj_addr(d)
+```
+
+There are two objects that are both vectors containing numbers from 1 to 10 (inclusive). `a`, `b`, and `c` refer to the first object and `d` refer to the second object. 
+
+
+
+
+
