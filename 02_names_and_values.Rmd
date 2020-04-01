@@ -54,6 +54,10 @@ evalq(mean) %>% obj_addr()
 match.fun("mean") %>% obj_addr()
 ```
 
+3. By default, base R data import functions, like `read.csv()`, will automatically convert non-syntactic names to syntactic ones. Why might this be problematic? What option allows you to suppress this behaviour?
+
+This might be problematic because it might lead to a loss of information in column names. This behavior can be supressed by setting the parameter `check.names` to `FALSE`.
+
 
 
 
