@@ -100,7 +100,7 @@ a <- 1:10
 b <- list(a, a)
 c <- list(b, a, 1:10)
 
-ref(c)
+# ref(c)
 ```
 
 ## 2.4.1 Exercises
@@ -159,4 +159,3 @@ x[[1]] <- x
 
 This doesn't create a circular list because of the the copy-on-modify behavior. 
 
-2. 
