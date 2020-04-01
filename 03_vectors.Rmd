@@ -1,5 +1,5 @@
 ---
-title: 'Chapter 2: Data Structures'
+title: 'Chapter 3: Vectors'
 author: "Emeka Mbazor"
 date: "3/23/2020"
 output: pdf_document

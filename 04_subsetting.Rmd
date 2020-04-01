@@ -1,5 +1,5 @@
 ---
-title: 'Chapter 3: Subsetting'
+title: 'Chapter 4: Subsetting'
 author: "Emeka Mbazor"
 date: "3/23/2020"
 output: pdf_document
