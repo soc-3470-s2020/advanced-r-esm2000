@@ -70,6 +70,11 @@ make.names(".123e1")
 
 `.123e1` is not a syntactic name because it doesn't begin with a letter.
 
+## 2.3.6 Exercises
+
+1. Why is `tracemem(1:10)` not useful?
+
+`tracemem(1:10)` is not useful because there's no way to make a copy of a vector without an initial reference to that vector.
 
 
 
