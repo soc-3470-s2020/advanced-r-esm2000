@@ -58,6 +58,11 @@ match.fun("mean") %>% obj_addr()
 
 This might be problematic because it might lead to a loss of information in column names. This behavior can be supressed by setting the parameter `check.names` to `FALSE`.
 
+4. What rules does `make.names()` use to convert non-syntactic names into syntactic ones?
+
+`make.names()` prepends the "X" character to the name if the first character isn't a letter. Invalid characters are translated to "." Missing values are translated to the characters "NA". Names that match existing R keywords have a dot appended to them. 
+
+
 
 
 
