@@ -103,5 +103,19 @@ c <- list(b, a, 1:10)
 ref(c)
 ```
 
+## 2.4.1 Exercises
+
+1. In the following example, why are `object.size(y)` and `obj_size(y)` so radically different? Consult the documentation of `object.size()`.
+
+```{r}
+y <- rep(list(runif(1e4)), 100)
+
+object.size(y)
+
+obj_size(y)
+
+```
+
+`object.size()` is a rough estimate of an object's size and cannot detect if elements of a list are shared. If elements of a list are shared, an object takes up less memory than it would've otherwise.
 
 
