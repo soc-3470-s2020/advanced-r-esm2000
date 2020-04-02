@@ -23,3 +23,21 @@ Read the documentation and write down the rules in your own words.
 
 `ifelse()` evaluates the logical expression that is the first parameter. If the logical expression evaluates to `TRUE`, the function returns the second argument. If the logical expression evaluates to `FALSE`, the function returns the third argument. If the logical expression is a missing value, the function returns a missing value. 
 
+2. Why does the following code work?
+
+```{r}
+x <- 1:10
+str(length(x))
+if (length(x)) "not empty" else "empty"
+
+
+x <- numeric()
+str(x)
+if (length(x)) "not empty" else "empty"
+```
+
+The code works because `if()` accepts integers and treats nonzero integers as `TRUE` and the rest as `FALSE`.
+
+
+
+
