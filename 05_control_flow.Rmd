@@ -52,3 +52,15 @@ out
 ```
 
 This code succeeds without errors because `x` is a numeric vector of length 0 and `out` is a list of length 0. The `for` loop has two iterations since `i` counts down from 1 to 0. `x[1]` is `NA` because `NA ^ 2` results in `NA`. The second iteration doesn't do anything. This results with `out` being a list of length 1 with the only value being a missing one.
+
+2. When the following code is evaluated, what can you say about the vector being iterated?
+
+```{r}
+xs <- c(1, 2, 3)
+for(x in xs) {
+  xs <- c(xs, x * 2)
+}
+xs
+```
+
+The vector being iterated is a seperate copy from the vector being altered within the `for` loop. 
