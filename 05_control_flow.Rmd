@@ -64,3 +64,14 @@ xs
 ```
 
 The vector being iterated is a seperate copy from the vector being altered within the `for` loop. 
+
+3. What does the following code tell you about when the index is updated?
+
+```{r}
+for (i in 1:3) {
+  i <- i * 2
+  print(i) 
+}
+```
+
+The `for` loop is updated only when it is initialized.
