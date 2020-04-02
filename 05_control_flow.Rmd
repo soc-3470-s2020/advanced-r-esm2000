@@ -38,6 +38,17 @@ if (length(x)) "not empty" else "empty"
 
 The code works because `if()` accepts integers and treats nonzero integers as `TRUE` and the rest as `FALSE`.
 
+## 5.3.3 Exercises
 
+1. Why does this code succeed without errors or warnings?
 
+```{r}
+x <- numeric()
+out <- vector("list", length(x))
+for (i in 1:length(x)) {
+  out[i] <- x[i] ^ 2
+}
+out
+```
 
+This code succeeds without errors because `x` is a numeric vector of length 0 and `out` is a list of length 0. The `for` loop has two iterations since `i` counts down from 1 to 0. `x[1]` is `NA` because `NA ^ 2` results in `NA`. The second iteration doesn't do anything. This results with `out` being a list of length 1 with the only value being a missing one.
